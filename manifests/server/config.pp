@@ -123,4 +123,10 @@ class puppet::server::config {
     }
   }
 
+  if $puppet::server::dns_alt_names {
+    ini_setting { 'dns_alt_names':
+        setting => 'dns_alt_names',
+        value   =>  $puppet::server::dns_alt_names
+  }
+
 }
