@@ -52,6 +52,7 @@ class puppet::server (
   $gentoo_use         = $puppet::params::master_use,
   $gentoo_keywords    = $puppet::params::master_keywords,
   $manage_package     = true,
+  $dns_alt_names      = undef,
 ) inherits puppet::params {
 
   $master = true
